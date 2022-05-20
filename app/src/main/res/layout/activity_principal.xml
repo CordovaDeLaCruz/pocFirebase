@@ -7,14 +7,38 @@
     tools:context=".PrincipalActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/TextViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="BIENVENIDO"/>
+        tools:text="email"/>
+    <TextView
+        android:id="@+id/TextViewDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewEmail"
+        tools:text="displayName"/>
+    <TextView
+        android:id="@+id/TextViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewDisplayName"
+        tools:text="phoneNumber"/>
+
+    <ImageView
+        android:id="@+id/ImageViewPhotoURL"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewPhoneNumber"/>
 
     <Button
         android:id="@+id/buttonSession"
@@ -23,7 +47,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ImageViewPhotoURL"
         android:text="Salir"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,8 +37,9 @@ class LoginActivity : AppCompatActivity() {
             //AuthUI.IdpConfig.EmailBuilder().build(),
             //AuthUI.IdpConfig.PhoneBuilder().build(),
             AuthUI.IdpConfig.GoogleBuilder().build())
-        //AuthUI.IdpConfig.FacebookBuilder().build(),
-        //AuthUI.IdpConfig.TwitterBuilder().build())
+            //AuthUI.IdpConfig.FacebookBuilder().build())
+            //AuthUI.IdpConfig.TwitterBuilder().build())
+
 
         google_button.setOnClickListener {
             // Create and launch sign-in intent
@@ -55,9 +56,19 @@ class LoginActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
-            Log.i("USER", user.toString())
-            Toast.makeText(this, "Bienvenido ${user!!.displayName}", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, PrincipalActivity::class.java))
+            Log.i("email", user!!.email.toString())
+            Log.i("displayName", user!!.displayName.toString())
+            Log.i("photoURL", user!!.photoUrl.toString())
+            Log.i("phoneNumber", user!!.phoneNumber.toString())
+            Log.i("isEmailVerified", user!!.isEmailVerified.toString())
+            val intent = Intent(this, PrincipalActivity::class.java)
+            intent.putExtra("email", user.email)
+            intent.putExtra("displayName", user.displayName)
+            intent.putExtra("photoURL", user.photoUrl)
+            intent.putExtra("phoneNumber", user.phoneNumber)
+            intent.putExtra("isEmailVerified", user.isEmailVerified)
+            Toast.makeText(this, "Bienvenido ${user.displayName}", Toast.LENGTH_SHORT).show()
+            startActivity(intent)
             finish()
         } else {
             // Sign in failed. If response is null the user canceled the

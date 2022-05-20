@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "991571780650-ep1eujdlaopsv40caru00keeue33bbqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pocloginfirebase",
+            "certificate_hash": "23b22d7e5a1cdebeeda9055d162cce7ebfd20c72"
+          }
+        },
+        {
           "client_id": "991571780650-i57roh59fpab9fgtcsu78ln5dhc218dq.apps.googleusercontent.com",
           "client_type": 3
         }

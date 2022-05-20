@@ -9,7 +9,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.pocloginfirebase1"
+        applicationId "com.example.pocloginfirebase"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -51,6 +51,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.2.0'
 
     implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation "com.github.bumptech.glide:glide:4.13.0"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
